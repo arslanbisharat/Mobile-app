@@ -13,14 +13,14 @@ In this project I built a mobile menu of a portifolio, and I have used javascrip
 
 ## Getting Started
 Since this is an HTML && CSS project, then gettong it and running it is very simple:
-clone this repo by typing `git clone https://github.com/descholar-ceo/mobile-menu` after that open the `index.html` file in the browser of your choice, make it in mobile version and click the hmburger icon, see what happens, that's what I did!
+clone this repo by typing `git clone https://github.com/arslanbisharat/mobile-menu` after that open the `index.html` file in the browser of your choice, make it in mobile version and click the hmburger icon, see what happens, that's what I did!
 ## Authors
 
 👤 **Mugirase Emmanuel**
 
-- GitHub: [@descholar-ceo](https://github.com/descholar-ceo)
-- Twitter: [@descholar3](https://twitter.com/descholar3)
-- LinkedIn: [Mugirase Emmanuel](https://linkedin.com/in/mugirase-emmanuel)
+- GitHub: [Arslan Bisharat](https://github.com/arslanbisharat)
+- Twitter: [@descholar3](https://twitter.com/arslanb_isharat)
+- LinkedIn: [Mugirase Emmanuel](https://linkedin.com/in/arslanbisharat)
 
 ## Acknowledgments
 
