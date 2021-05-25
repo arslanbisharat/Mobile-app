@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   text-decoration: none;
 }
@@ -21,6 +25,19 @@ header {
   padding: 15px;
   background-color: #3c3a39;
   color: white;
+}
+
+.span1 {
+  margin-left: 100%;
+}
+
+#desktop-nav,
+#desktop-nav ul {
+  display: none;
+}
+
+#desktop-nav .span1 {
+  text-align: end;
 }
 
 #logo {
@@ -43,19 +60,39 @@ header {
   color: white;
 }
 
+#desktop-nav {
+  width: 90%;
+}
+
+#mobile-navv {
+  margin-right: 100%;
+  color: wheat;
+}
+
+@media (min-width: 768px) {
+  #mobile-navv {
+    display: none;
+  }
+}
+
+#mobile-navv li a {
+  color: white;
+  font-weight: bold;
+}
+
 main {
   display: flex;
   flex-direction: column;
 }
 
-.intro,
-.about-me {
+#intro,
+#about-me {
   background-color: #1c1a19;
   color: white;
   position: relative;
 }
 
-.intro {
+#intro {
   padding: 10%;
   padding-bottom: 20vh;
 }
@@ -66,8 +103,21 @@ main {
   bottom: 0;
 }
 
+.desktop-icon {
+  display: none;
+}
+
+.card h2 {
+  font-family: "Crete Round", serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 44px;
+  color: #fff;
+}
+
 .intro-greet,
-.about-me h2 {
+#about-me h2 {
   color: #ff6b00;
   font-family: "Crete Round", serif;
   font-style: normal;
@@ -114,13 +164,14 @@ main {
   height: 20px;
 }
 
-.about-me-section {
+.about-me-section,
+.stacks {
   position: relative;
   padding: 10%;
   padding-bottom: 20vh;
 }
 
-.projects {
+#projects {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -130,7 +181,7 @@ main {
   padding: 10%;
 }
 
-.projects h2 {
+#projects h2 {
   font-family: "Crete Round", serif;
   font-style: normal;
   font-weight: normal;
@@ -141,7 +192,7 @@ main {
   color: #1c1a19;
 }
 
-.projects hr {
+#projects hr {
   margin: 25px 0;
   border-color: #212121;
 }
@@ -159,6 +210,15 @@ main {
 .first-card-img {
   width: 85vw;
   height: auto;
+}
+
+.background-div {
+  background: linear-gradient(0deg, #2a2728, #98909280, rgba(255, 255, 255, 0));
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .description,
@@ -214,15 +274,6 @@ li {
   -webkit-backdrop-filter: blur(2px);
 }
 
-.card h2 {
-  font-family: "Crete Round", serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 32px;
-  line-height: 44px;
-  color: #fff;
-}
-
 .gtime {
   background-image: url("../media/png/gtime.png");
 }
@@ -260,8 +311,9 @@ li {
   background: rgba(0, 0, 0, 0.349);
 }
 
-.about-me,
-.about-me-section {
+#about-me,
+.about-me-section,
+.stacks {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -293,11 +345,20 @@ li {
   letter-spacing: 0.03em;
   color: #fff;
   align-self: start;
+  border: 1px solid transparent;
   transition: 350ms;
+  cursor: pointer;
+  outline: none;
 }
 
 .link:hover {
-  background: #a04300;
+  color: #f55800;
+  background: #fff5e1;
+  border: 1px solid #f55800;
+}
+
+.centered-link {
+  align-self: center;
 }
 
 .about-me-icon {
@@ -324,4 +385,207 @@ li {
 
 .skills {
   list-style: inside url("../media/svg/circle.svg");
+}
+
+#contact {
+  padding: 10%;
+}
+
+#contact h2 {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 44px;
+  text-align: center;
+  color: #172b4d;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input {
+  border: none;
+  outline: none;
+  border-bottom: solid 2px #dbd8d7;
+}
+
+textarea {
+  color: #3c3a39;
+  border: none;
+  outline: none;
+}
+
+input,
+textarea {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 24px;
+  margin: 5px;
+  padding: 5px;
+  min-width: 50vw;
+}
+
+.name-form {
+  display: none;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5vh;
+  filter:
+    invert(67%) sepia(46%) saturate(986%) hue-rotate(179deg)
+    brightness(92%) contrast(82%);
+}
+
+@media all and (min-width: 720px) {
+  .top-social {
+    flex-direction: column;
+    position: absolute;
+    left: 5px;
+    bottom: 35%;
+  }
+
+  .mobile-icon {
+    display: none;
+  }
+
+  .desktop-icon {
+    display: block;
+    height: 50%;
+  }
+
+  #intro {
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .menu-bars {
+    display: none;
+  }
+
+  #desktop-nav {
+    display: block;
+  }
+
+  #desktop-nav ul {
+    display: flex;
+    margin-right: 10vw;
+  }
+
+  .nav-link {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 20px;
+    color: #fff;
+    padding: 15px;
+    border: 1px solid transparent;
+    transition: 350ms;
+  }
+
+  .nav-link:hover {
+    border: 1px solid #d2d5db;
+  }
+
+  #logo {
+    font-size: 24px;
+  }
+
+  .first-card {
+    display: flex;
+  }
+
+  .first-card-img {
+    width: 40vw;
+  }
+
+  .cards-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card {
+    width: auto;
+    height: 40vh;
+    padding: 2%;
+    cursor: pointer;
+  }
+
+  .card,
+  .card * {
+    transition: all 350ms;
+  }
+
+  .card-link,
+  .card:hover .background-div,
+  .card:hover .card-description {
+    opacity: 0;
+  }
+
+  .card:hover .card-link {
+    opacity: 1;
+  }
+
+  .stacks {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+  }
+
+  .about-me-section {
+    align-items: flex-start;
+  }
+
+  .about-me-section > * {
+    max-width: 50vw;
+    margin: 15px 0;
+  }
+
+  #contact {
+    display: flex;
+    padding: 10% 5%;
+  }
+
+  #contact h2 {
+    width: 30vw;
+  }
+
+  #fullname {
+    display: none;
+  }
+
+  #email,
+  textarea {
+    min-width: 50vw;
+  }
+
+  .name-form {
+    display: flex;
+    min-width: 100%;
+  }
+
+  #name,
+  #surname {
+    min-width: 49%;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .social-icon {
+    width: 3vw;
+    height: 32px;
+  }
 }
