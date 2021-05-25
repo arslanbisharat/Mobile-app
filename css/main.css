@@ -27,9 +27,17 @@ header {
   color: white;
 }
 
+.span1 {
+  margin-left: 100%;
+}
+
 #desktop-nav,
 #desktop-nav ul {
   display: none;
+}
+
+#desktop-nav .span1 {
+  text-align: end;
 }
 
 #logo {
@@ -50,6 +58,26 @@ header {
   width: 18px;
   height: 12px;
   color: white;
+}
+
+#desktop-nav {
+  width: 90%;
+}
+
+#mobile-navv {
+  margin-right: 100%;
+  color: wheat;
+}
+
+@media (min-width: 768px) {
+  #mobile-navv {
+    display: none;
+  }
+}
+
+#mobile-navv li a {
+  color: white;
+  font-weight: bold;
 }
 
 main {
@@ -560,39 +588,4 @@ textarea {
     width: 3vw;
     height: 32px;
   }
-}
-
-.full-screen-menu {
-  height: 100vh;
-  width: 100%;
-  background-color: #3c3a39;
-}
-
-.full-screen-menu > ul > li > a {
-  color: rgb(255, 255, 255);
-}
-
-.full-menu-option {
-  border-bottom: 1px solid #6f6c6b;
-}
-
-.navbar {
-  display: flex;
-  flex-direction: row-reverse;
-  padding: 1rem;
-}
-
-.full-menu-container {
-  width: 90%;
-  margin: 4rem auto;
-}
-
-.btn-close {
-  border: none;
-  background: none;
-  color: #6f6c6b;
-}
-
-.is-hidden {
-  display: none;
 }
